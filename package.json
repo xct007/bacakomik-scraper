@@ -1,0 +1,47 @@
+{
+  "name": "bacakomik-scraper",
+  "version": "1.0.0",
+  "description": "Baca komik api scraper",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "types": "./dist/@types/index.d.ts",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "types": "./dist/@types/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:all": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:types && node scripts/write-package.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xct007/bacakomik-scraper.git"
+  },
+  "keywords": [
+    "comic",
+    "scraper",
+    "api"
+  ],
+  "author": "FrierenDv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xct007/bacakomik-scraper/issues"
+  },
+  "homepage": "https://github.com/xct007/bacakomik-scraper#readme",
+  "dependencies": {
+    "axios": "^1.2.3",
+    "pdfkit": "^0.13.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@types/pdfkit": "^0.12.8",
+    "@types/request": "^2.48.8",
+    "rimraf": "^4.1.1",
+    "typescript": "^4.9.4"
+  }
+}
