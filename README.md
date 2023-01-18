@@ -11,13 +11,14 @@ yarn add github:xct007/bacakomik-scraper
 - Example
 
 ```js
+cons { bacaKomik } = require("bacakomik-scraper")
 const {
   latest,
   popular,
   search,
   detail,
   getPdf,
-} = require("bacakomik-scraper");
+} = bacaKomik
 
 latest().then((mek) => {
   console.log(mek);
