@@ -1,5 +1,8 @@
 ## Baca Komik Scraper;
 
+### Note;
+`bacakomik.co` use CloudFlare to block request if not from `indonesia`
+
 ### Help me to test.
 
 - install packages
@@ -11,7 +14,7 @@ yarn add github:xct007/bacakomik-scraper
 - Example
 
 ```js
-cons { bacaKomik } = require("bacakomik-scraper")
+const { bacaKomik } = require("bacakomik-scraper")
 const {
   latest,
   popular,
